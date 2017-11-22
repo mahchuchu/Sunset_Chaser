@@ -10,6 +10,9 @@ public class PlatformGenerator : MonoBehaviour {
 	public Transform newPlat;
 
 	private float platformWidth;
+
+	public float distBetweenMin;
+	public float distBetweenMax;
 	
 	// Use this for initialization
 	void Start () {
@@ -24,6 +27,8 @@ public class PlatformGenerator : MonoBehaviour {
 
         //Same as above, except this makes the player keep its local orientation rather than its global orientation.
         thePlatform.transform.SetParent(newPlat, false);
+
+        distBetween = Random.Range(distBetweenMin, distBetweenMax);
 
 		if (transform.position.x < generationPoint.position.x) {
 			transform.position = new Vector3(transform.position.x + platformWidth + distBetween, transform.position.y, transform.position.z);
