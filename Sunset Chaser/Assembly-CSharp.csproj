@@ -57,6 +57,7 @@
      <Compile Include="Assets\FarlandSkies\Demo\Scripts\Skybox\SkyboxRotator.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\CloudianController.cs" />
+     <Compile Include="Assets\Scripts\ObjectPooler.cs" />
      <Compile Include="Assets\Scripts\PlatformDestroyer.cs" />
      <Compile Include="Assets\Scripts\PlatformFollow.cs" />
      <Compile Include="Assets\Scripts\PlatformGenerator.cs" />
