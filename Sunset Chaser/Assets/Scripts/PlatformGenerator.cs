@@ -16,20 +16,23 @@ public class PlatformGenerator : MonoBehaviour {
 	public float distBetweenMin;
 	public float distBetweenMax;
 
-	public GameObject[] thePlatforms;
+	//public GameObject[] thePlatforms;
 	private int platformSelector;
 
-	//public ObjectPooler theObjectPool;
+
+
+
+	public ObjectPooler[] theObjectPools;
 
 	// Use this for initialization
 	void Start ()
 	{
 		//platformWidth = thePlatform.GetComponent<BoxCollider2D>().size.x;
 
-		platformWidths = new float[thePlatforms.Length];
+		platformWidths = new float[theObjectPools.Length];
 
-		for (int i = 0; i < thePlatforms.Length; i++) {
-			platformWidths[i] = thePlatforms[i].GetComponent<BoxCollider2D>().size.x;
+		for (int i = 0; i < theObjectPools.Length; i++) {
+			platformWidths[i] = theObjectPools[i].pooledObject.GetComponent<BoxCollider2D>().size.x;
 		}
 
 	}
@@ -48,21 +51,24 @@ public class PlatformGenerator : MonoBehaviour {
 
 			distBetween = Random.Range(distBetweenMin, distBetweenMax);
 
-			platformSelector = Random.Range(0, thePlatforms.Length);
+			platformSelector = Random.Range(0, theObjectPools.Length);
 
-			transform.position = new Vector3(transform.position.x + platformWidths[platformSelector] + distBetween, transform.position.y, transform.position.z);
+			transform.position = new Vector3(transform.position.x + (platformWidths[platformSelector] / 2) + distBetween, transform.position.y, transform.position.z);
 
 
 
-			Instantiate (/*thePlatform */ thePlatforms[platformSelector], transform.position, transform.rotation);
+			//Instantiate (/*thePlatform */ thePlatforms[platformSelector], transform.position, transform.rotation);
 
-			/*
-			GameObject newPlatform = theObjectPool.GetPooledObject();
+
+			GameObject newPlatform = theObjectPools[platformSelector].GetPooledObject();
 
 			newPlatform.transform.position = transform.position;
 			newPlatform.transform.rotation = transform.rotation;
 			newPlatform.SetActive (true);
-			*/
+
+			transform.position = new Vector3(transform.position.x + (platformWidths[platformSelector] / 2), transform.position.y, transform.position.z);
+
+
 		}
 	}
 }
