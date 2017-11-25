@@ -12,10 +12,14 @@ public class GameManager : MonoBehaviour {
 
 	private PlatformDestroyer[] platformList;
 
+	private ScoreManager theScoreManager;
+
 	// Use this for initialization
 	void Start () {
 		platformStartPoint = platformGenerator.position;
 		playerStartPoint = thePlayer.transform.position;
+
+		theScoreManager = FindObjectOfType<ScoreManager>();
 		
 	}
 	
@@ -31,6 +35,7 @@ public class GameManager : MonoBehaviour {
 
 	public IEnumerator RestartGameCo ()
 	{
+		theScoreManager.scoreIncreasing = false;
 		thePlayer.gameObject.SetActive (false);
 		yield return new WaitForSeconds (0.5f);
 		platformList = FindObjectsOfType<PlatformDestroyer> ();
@@ -41,5 +46,7 @@ public class GameManager : MonoBehaviour {
 		thePlayer.transform.position = playerStartPoint;
 		platformGenerator.position = platformStartPoint;
 		thePlayer.gameObject.SetActive (true); 
+		theScoreManager.scoreCount = 0;
+		theScoreManager.scoreIncreasing = true;
 	}
 }

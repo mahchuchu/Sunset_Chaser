@@ -62,6 +62,7 @@
      <Compile Include="Assets\Scripts\PlatformDestroyer.cs" />
      <Compile Include="Assets\Scripts\PlatformFollow.cs" />
      <Compile Include="Assets\Scripts\PlatformGenerator.cs" />
+     <Compile Include="Assets\Scripts\ScoreManager.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
