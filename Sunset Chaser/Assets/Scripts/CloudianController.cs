@@ -10,6 +10,8 @@ public class CloudianController : MonoBehaviour {
 	public float jumpTime;
 	private float jumpTimeCounter;
 
+	private bool stoppedJumping;
+
 	private Rigidbody2D myBody;
 
 	public bool grounded;
@@ -30,6 +32,7 @@ public class CloudianController : MonoBehaviour {
 
 		myBody.freezeRotation = true;
 
+		stoppedJumping = true;
 	}
 	
 	// Update is called once per frame
@@ -45,10 +48,11 @@ public class CloudianController : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.Space)) {
 			if (grounded) {
 				myBody.velocity = new Vector2 (myBody.velocity.x, jumpForce);
+				stoppedJumping = false;
 			}
 		}
 
-		if (Input.GetKey (KeyCode.Space)) {
+		if (Input.GetKey (KeyCode.Space) && !stoppedJumping) {
 			if (jumpTimeCounter > 0) {
 				myBody.velocity = new Vector2 (myBody.velocity.x, jumpForce);
 				jumpTimeCounter -= Time.deltaTime;
@@ -57,6 +61,7 @@ public class CloudianController : MonoBehaviour {
 
 		if (Input.GetKeyUp (KeyCode.Space)) {
 			jumpTimeCounter = 0;
+			stoppedJumping = true;
 		}
 
 		if (grounded) {
