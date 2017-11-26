@@ -18,15 +18,15 @@ public class PlatformDestroyer : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update ()
-	{
+	void Update () {
 
 		/*
 		When the platform point goes before the dynamically moving point of destruction
 		it will be deactivated, to be used with the ObjectPooler script, and will be 
 		actived when it will be needed again after generating it to it's new further position.
 		*/
-		if (transform.position.x < platformDestructionPoint.transform.position.x) {
+		if (transform.position.x < platformDestructionPoint.transform.position.x) 
+		{
 			gameObject.SetActive(false);
 		}
 	}
