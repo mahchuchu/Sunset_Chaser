@@ -3,19 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//Functions for the Main Menu Screen
 public class MainMenu : MonoBehaviour {
 
 	public string sunsetChaserGame;
 
-	public void PlayGame ()
-	{
+	//Allows the player to start the actual Sunset Chaser game.
+	public void PlayGame () {
 		SceneManager.LoadScene (sunsetChaserGame);
 	}
 
-	public void QuitGame ()
-	{
+	//Exits out of the game application.
+	public void QuitGame () {
 		Application.Quit ();
 	}
-
-
 }
