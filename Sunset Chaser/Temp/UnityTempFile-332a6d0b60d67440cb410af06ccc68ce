@@ -167,7 +167,6 @@
 'Assets/Scripts/ObjectPooler.cs'
 'Assets/Scripts/PauseMenu.cs'
 'Assets/Scripts/PlatformDestroyer.cs'
-'Assets/Scripts/PlatformFollow.cs'
 'Assets/Scripts/PlatformGenerator.cs'
 'Assets/Scripts/ScoreManager.cs'
 -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
