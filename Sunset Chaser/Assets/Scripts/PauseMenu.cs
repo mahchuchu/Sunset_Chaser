@@ -14,6 +14,7 @@ public class PauseMenu : MonoBehaviour {
 
 	public GameObject pauseMenu;
 
+
 	//Pauses the game mid-game, will use a button and turn on Pause Menu.
 	public void Pause ()
 	{
