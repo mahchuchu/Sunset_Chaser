@@ -112,6 +112,34 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &80472495
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 80472496}
+  m_Layer: 0
+  m_Name: maxHeightPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &80472496
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 80472495}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1042023447}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &128020286
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,7 +372,7 @@ Transform:
   - {fileID: 1154741016}
   - {fileID: 1232154193}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &589993484
 GameObject:
@@ -1272,6 +1300,58 @@ MonoBehaviour:
   groundCheck: {fileID: 1149712693}
   groundCheckRadius: 0.1
   theGameManager: {fileID: 1525376018}
+--- !u!1 &1042023445
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1042023447}
+  - component: {fileID: 1042023446}
+  m_Layer: 0
+  m_Name: BadCloudGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1042023446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1042023445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68fe52ac7790d43729af6af2ecfdde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thePlatform: {fileID: 1604251370745102, guid: cf725e4331a4c417e98fc05704ed409c,
+    type: 2}
+  generationPoint: {fileID: 1746466658}
+  fixedPlat: {fileID: 0}
+  distBetween: 1e+11
+  distBetweenMin: 5
+  distBetweenMax: 10
+  theObjectPools:
+  - {fileID: 1232154194}
+  maxHeightChange: 6
+  maxHeightPoint: {fileID: 80472496}
+--- !u!4 &1042023447
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1042023445}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8.51, y: -0.83, z: -0.2153888}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 80472496}
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1129992005
 GameObject:
   m_ObjectHideFlags: 0
@@ -1762,13 +1842,12 @@ MonoBehaviour:
   fixedPlat: {fileID: 0}
   distBetween: 1e+11
   distBetweenMin: 1
-  distBetweenMax: 5
+  distBetweenMax: 10
   theObjectPools:
   - {fileID: 903063343}
   - {fileID: 708291586}
   - {fileID: 1743608575}
   - {fileID: 1154741017}
-  - {fileID: 1232154194}
   maxHeightChange: 4
   maxHeightPoint: {fileID: 975770017}
 --- !u!4 &1322498346
@@ -1783,7 +1862,7 @@ Transform:
   m_Children:
   - {fileID: 975770017}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1323636213
 GameObject:
@@ -2798,7 +2877,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1944941879
 GameObject:
