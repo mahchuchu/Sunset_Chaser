@@ -715,7 +715,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pooledObject: {fileID: 1273133273949140, guid: aeb2308aa8f794e839345a73dbe840c2,
     type: 2}
-  pooledAmount: 2
+  pooledAmount: 5
 --- !u!1 &749007433
 GameObject:
   m_ObjectHideFlags: 0
@@ -1115,7 +1115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pooledObject: {fileID: 1269833461548064, guid: c8066b7baa4334e2289ec2abb781c17d,
     type: 2}
-  pooledAmount: 2
+  pooledAmount: 5
 --- !u!4 &903063344
 Transform:
   m_ObjectHideFlags: 0
@@ -1332,11 +1332,11 @@ MonoBehaviour:
   generationPoint: {fileID: 1746466658}
   fixedPlat: {fileID: 0}
   distBetween: 1e+11
-  distBetweenMin: 5
+  distBetweenMin: 3
   distBetweenMax: 10
   theObjectPools:
   - {fileID: 1232154194}
-  maxHeightChange: 6
+  maxHeightChange: 5
   maxHeightPoint: {fileID: 80472496}
 --- !u!4 &1042023447
 Transform:
@@ -1617,7 +1617,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pooledObject: {fileID: 1769357387342538, guid: 6ca6c3066b936419ebe8a25d2673736a,
     type: 2}
-  pooledAmount: 2
+  pooledAmount: 5
 --- !u!1 &1232154192
 GameObject:
   m_ObjectHideFlags: 0
@@ -1660,7 +1660,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pooledObject: {fileID: 1080647486067656, guid: 9170492c20ec841269533e9e10f9da3e,
     type: 2}
-  pooledAmount: 2
+  pooledAmount: 5
 --- !u!1 &1295782181
 GameObject:
   m_ObjectHideFlags: 0
@@ -1842,7 +1842,7 @@ MonoBehaviour:
   fixedPlat: {fileID: 0}
   distBetween: 1e+11
   distBetweenMin: 1
-  distBetweenMax: 10
+  distBetweenMax: 4
   theObjectPools:
   - {fileID: 903063343}
   - {fileID: 708291586}
@@ -2289,7 +2289,7 @@ GameObject:
   - component: {fileID: 1502453772}
   m_Layer: 8
   m_Name: Catcher
-  m_TagString: killbox
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2360,6 +2360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformGenerator: {fileID: 1322498346}
+  badCloudGenerator: {fileID: 1042023447}
   thePlayer: {fileID: 1029513433}
   theDeathScreen: {fileID: 616050381}
 --- !u!4 &1525376019
@@ -2493,7 +2494,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pooledObject: {fileID: 1604251370745102, guid: cf725e4331a4c417e98fc05704ed409c,
     type: 2}
-  pooledAmount: 2
+  pooledAmount: 5
 --- !u!1 &1746466657
 GameObject:
   m_ObjectHideFlags: 0

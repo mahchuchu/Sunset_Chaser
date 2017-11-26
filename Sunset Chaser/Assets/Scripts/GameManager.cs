@@ -9,10 +9,13 @@ Using a singleton pattern.
 public class GameManager : MonoBehaviour {
 
 	public Transform platformGenerator;
-	private Vector3 platformStartPoint;
-
+	public Transform badCloudGenerator;
 	public CloudianController thePlayer;
+
+	private Vector3 platformStartPoint;
+	private Vector3 badCloudStartPoint;
 	private Vector3 playerStartPoint;
+
 
 	private PlatformDestroyer[] platformList;
 
@@ -25,6 +28,7 @@ public class GameManager : MonoBehaviour {
 
 		//sets the original start positions of the player and platforms
 		platformStartPoint = platformGenerator.position;
+		badCloudStartPoint = badCloudGenerator.position;
 		playerStartPoint = thePlayer.transform.position;
 
 		//variable sets to parameters from ScoreManager script
@@ -60,6 +64,7 @@ public class GameManager : MonoBehaviour {
 		//The player and platforms return to original start position
 		thePlayer.transform.position = playerStartPoint;
 		platformGenerator.position = platformStartPoint;
+		badCloudGenerator.position = badCloudStartPoint;
 
 		//Activates the player
 		thePlayer.gameObject.SetActive (true); 
