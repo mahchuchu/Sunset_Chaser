@@ -100,18 +100,18 @@ public class CloudianController : MonoBehaviour {
 	*/
 	void OnCollisionEnter2D (Collision2D other) {
 		
-		//Checks when the player touces the object which will kill it.
+		//Checks when the player falls of the platforms and dies.
 		if (other.gameObject.tag == "killbox") 
 		{
 			theGameManager.RestartGame ();
 			deathSound.Play();
 		}
 
+		//Check when the player touches the bad cloud and dies
 		if (other.gameObject.tag == "killcloud") 
 		{
 			theGameManager.RestartGame ();
 			thunderSound.Play();
 		}
-
 	}
 }
