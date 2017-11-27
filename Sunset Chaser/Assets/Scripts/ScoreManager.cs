@@ -53,6 +53,7 @@ public class ScoreManager : MonoBehaviour {
 	public void resetHigh ()
 	{
 		highScoreCount = 0;
+		PlayerPrefs.SetFloat("HighScore", highScoreCount);
 	}
 
 }
