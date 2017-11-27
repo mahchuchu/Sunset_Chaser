@@ -47,4 +47,11 @@ public class PauseMenu : MonoBehaviour {
 		Time.timeScale = 1f;
 		SceneManager.LoadScene(mainMenuLevel);
 	}
+
+	void Update ()
+	{
+		if (Input.GetKeyDown (KeyCode.Escape) && pauseMenu.activeSelf == false) {
+			Pause ();
+		}
+	}
 }
