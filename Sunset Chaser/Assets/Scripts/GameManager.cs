@@ -24,15 +24,20 @@ public class GameManager : MonoBehaviour {
 	public DeathMenu theDeathScreen;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+	{
 
 		//sets the original start positions of the player and platforms
 		platformStartPoint = platformGenerator.position;
-		badCloudStartPoint = badCloudGenerator.position;
+		if (GameObject.Find("badCloudGenerator")) {
+			badCloudStartPoint = badCloudGenerator.position;
+		} else {
+			Debug.Log ("No Bad Clouds in Main Menu");
+		}
 		playerStartPoint = thePlayer.transform.position;
 
 		//variable sets to parameters from ScoreManager script
-		theScoreManager = FindObjectOfType<ScoreManager>();
+		theScoreManager = FindObjectOfType<ScoreManager> ();
 	}
 
 	/*

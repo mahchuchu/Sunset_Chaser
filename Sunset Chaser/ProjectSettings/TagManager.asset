@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - killbox
+  - killcloud
   layers:
   - Default
   - TransparentFX

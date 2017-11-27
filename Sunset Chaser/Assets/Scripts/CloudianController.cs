@@ -26,6 +26,7 @@ public class CloudianController : MonoBehaviour {
 
 	public AudioSource jumpSound;
 	public AudioSource deathSound;
+	public AudioSource thunderSound;
 
 	// Use this for initialization
 	void Start () {
@@ -105,5 +106,12 @@ public class CloudianController : MonoBehaviour {
 			theGameManager.RestartGame ();
 			deathSound.Play();
 		}
+
+		if (other.gameObject.tag == "killcloud") 
+		{
+			theGameManager.RestartGame ();
+			thunderSound.Play();
+		}
+
 	}
 }
