@@ -50,7 +50,7 @@ public class PauseMenu : MonoBehaviour {
 
 	void Update ()
 	{
-		if (Input.GetKeyDown (KeyCode.Escape) && pauseMenu.activeSelf == false) {
+		if (Input.GetKeyDown (KeyCode.Escape)){
 			Pause ();
 		}
 	}
