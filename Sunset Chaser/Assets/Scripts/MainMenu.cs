@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour {
 	public string sunsetChaserGame;
 	public string instructions;
 	public string menu;
+	public string credits;
 
 	//Allows the player to start the actual Sunset Chaser game.
 	public void PlayGame () {
@@ -26,9 +27,14 @@ public class MainMenu : MonoBehaviour {
 		SceneManager.LoadScene (instructions);
 	}
 
-	//returns back to the main menu scene
+	//returns back to the main menu scene.
 	public void backToMain () {
 		SceneManager.LoadScene (menu);
+	}
+
+	//Goes to the Credits scene.
+	public void creditScreen() {
+		SceneManager.LoadScene (credits);
 	}
 
 }
