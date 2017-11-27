@@ -136,7 +136,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 90671632}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.000061035156, y: -100, z: 0}
+  m_LocalPosition: {x: -0.000061035156, y: -67, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1187905795}
@@ -145,7 +145,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000061035, y: -100}
+  m_AnchoredPosition: {x: -0.000061035, y: -67}
   m_SizeDelta: {x: 280.4, y: 59}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &90671634
@@ -559,7 +559,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1187905794}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.000015258789, y: -59.999996, z: 0}
+  m_LocalPosition: {x: 0.000015258789, y: -85, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 90671633}
@@ -567,8 +567,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000015259, y: -60}
-  m_SizeDelta: {x: 303.8, y: 74.4}
+  m_AnchoredPosition: {x: 0.000015259, y: -85}
+  m_SizeDelta: {x: 303.8, y: 100.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1187905796
 MonoBehaviour:
@@ -605,7 +605,10 @@ MonoBehaviour:
   m_Text: 'Jump = Space Button
 
 
-    (Hold longer for higher jump)'
+    (Hold longer for higher jump)
+
+
+    Pause = Esc Button'
 --- !u!222 &1187905797
 CanvasRenderer:
   m_ObjectHideFlags: 0
