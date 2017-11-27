@@ -24,6 +24,8 @@ public class CloudianController : MonoBehaviour {
 
 	public GameManager theGameManager;
 
+	public AudioSource jumpSound;
+	public AudioSource deathSound;
 
 	// Use this for initialization
 	void Start () {
@@ -54,6 +56,7 @@ public class CloudianController : MonoBehaviour {
 			{
 				myBody.velocity = new Vector2 (myBody.velocity.x, jumpForce);
 				stoppedJumping = false;
+				jumpSound.Play();
 			}
 		}
 
@@ -100,6 +103,7 @@ public class CloudianController : MonoBehaviour {
 		if (other.gameObject.tag == "killbox") 
 		{
 			theGameManager.RestartGame ();
+			deathSound.Play();
 		}
 	}
 }
